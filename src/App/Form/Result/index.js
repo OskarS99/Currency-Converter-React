@@ -2,14 +2,15 @@ import React from "react";
 import "./style.css";
 
 export const Result = ({ result }) => (
+
     <p className="result">
+
         {result !== undefined && (
             <>
-                {result.sourceAmount.tofixed(2)}&nbps;PLN&nbps;=
+                {result.sourceAmount.toFixed(2)}&nbsp;PLN&nbsp;=
                 {" "}
-
                 <strong>
-                    {result.targetAmount.tofixed(2)}&nbps;{result.currency}
+                    {result.targetAmount.toFixed(2)}&nbsp;{result.currency}
                 </strong>
             </>
         )}
