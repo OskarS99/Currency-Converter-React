@@ -1,5 +1,5 @@
 # Currency converter - React
-
+![Program](src/currencyExchange.png)
 ## Demo
 https://oskars99.github.io/currencyconverter-react/
 
