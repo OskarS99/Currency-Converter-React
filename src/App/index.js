@@ -1,17 +1,16 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './App.css';
 import { Form } from './Form';
 import { currencies } from './currencies';
 
 function App() {
- 
     const [result, setResult] = useState();
 
     const calculateResult = (currency, amount) => {
         const rate = currencies
-        .find(({ short }) => short === currency)
-        .rate;
-        
+            .find(({ short }) => short === currency)
+            .rate;
+
         setResult({
             sourceAmount: +amount,
             targetAmount: amount / rate,
@@ -22,11 +21,11 @@ function App() {
     return (
         <div className="container">
             <Form
-            result={result}
-            calculateResult={calculateResult}
+                result={result}
+                calculateResult={calculateResult}
             />
         </div>
     )
-} 
+}
 
 export default App;
