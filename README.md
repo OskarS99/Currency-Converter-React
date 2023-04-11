@@ -7,10 +7,10 @@ https://oskars99.github.io/currencyconverter-react/
 It is a calculator that allows you to convert the value of an amount in a specific currency. Three most popular currencies are available: USD, EUR, GBP
 
 ## Available Technology
-### HTML
-### CSS
-### JavaScirpt
-### JS Library: React.js
+#### HTML
+#### CSS
+#### JavaScirpt
+#### JS Library: React.js
 
 ## Available Scripts
 
