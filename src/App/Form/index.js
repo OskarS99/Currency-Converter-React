@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { currencies } from "../currencies";
 import { Result } from "./Result"
-import "./style.css"
+import { FormPart, FormInput, FormSelect, Header, Title, Button } from "./styled.js";
 
 export const Form = ({ calculateResult, result } ) => {
     const [currency, setCurrency] = useState(currencies[0].short);
@@ -13,20 +13,19 @@ export const Form = ({ calculateResult, result } ) => {
     }
 
     return (
-        <form className="form" onSubmit={onSubmit}>
-            <h1 className="form__header">
+        <FormPart onSubmit={onSubmit}>
+            <Header>
                 Przelicznik walut
-            </h1>
+            </Header>
             <p>
                 <label>
-                    <span className="form__labelText">
+                    <Title>
                         Kwota w zł*:
-                    </span>
-                    <input
+                    </Title>
+                    <FormInput
                         value={amount}
                         onChange={({ target }) => setAmount(target.value)}
                         placeholder="Wpisz kwotę w zł"
-                        className="form__field"
                         type="number"
                         required
                     />
@@ -34,11 +33,10 @@ export const Form = ({ calculateResult, result } ) => {
             </p>
             <p>
                 <label>
-                    <span className="form__labelText">
+                    <Title>
                         Waluta:
-                    </span>
-                    <select
-                        className="form__field"
+                    </Title>
+                    <FormSelect
                         value={currency}
                         onChange={({ target }) => setCurrency(target.value)}
                     >
@@ -50,13 +48,13 @@ export const Form = ({ calculateResult, result } ) => {
                                 {currency.name}
                             </option>
                         )))}
-                    </select>
+                    </FormSelect>
                 </label>
             </p>
             <p>
-                <button className="form__button">Oblicz</button>
+                <Button>Oblicz</Button>
             </p>
             <Result result={result}/>
-        </form>
+        </FormPart>
     )
 }
