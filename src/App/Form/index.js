@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { currencies } from "../currencies";
 import { Result } from "./Result"
-import { FormPart, FormInput, FormSelect, Header, Title, Button } from "./styled.js";
+import { FormStyled, FormInput, FormSelect, FormHeader, FormTitle, FormButton } from "./styled.js";
 
 export const Form = ({ calculateResult, result } ) => {
     const [currency, setCurrency] = useState(currencies[0].short);
@@ -13,16 +13,17 @@ export const Form = ({ calculateResult, result } ) => {
     }
 
     return (
-        <FormPart onSubmit={onSubmit}>
-            <Header>
+        <FormStyled onSubmit={onSubmit}>
+            <FormHeader>
                 Przelicznik walut
-            </Header>
+            </FormHeader>
             <p>
                 <label>
-                    <Title>
+                    <FormTitle>
                         Kwota w zł*:
-                    </Title>
+                    </FormTitle>
                     <FormInput
+                        min={0.01}                   
                         value={amount}
                         onChange={({ target }) => setAmount(target.value)}
                         placeholder="Wpisz kwotę w zł"
@@ -33,9 +34,9 @@ export const Form = ({ calculateResult, result } ) => {
             </p>
             <p>
                 <label>
-                    <Title>
+                    <FormTitle>
                         Waluta:
-                    </Title>
+                    </FormTitle>
                     <FormSelect
                         value={currency}
                         onChange={({ target }) => setCurrency(target.value)}
@@ -52,9 +53,9 @@ export const Form = ({ calculateResult, result } ) => {
                 </label>
             </p>
             <p>
-                <Button>Oblicz</Button>
+                <FormButton>Oblicz</FormButton>
             </p>
             <Result result={result}/>
-        </FormPart>
+        </FormStyled>
     )
 }

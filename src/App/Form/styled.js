@@ -1,16 +1,16 @@
 import styled from "styled-components";
 
-export const FormPart = styled.form`
+export const FormStyled = styled.form`
   margin: 40px auto;
   border-radius: 10px;
   border-color: #ffffff;
 `;
 
-export const Header = styled.h1`
+export const FormHeader = styled.h1`
   color: white;
 `;
 
-export const Title = styled.span`
+export const FormTitle = styled.span`
   color: #ffffff;
   font-weight: bold;
   font-size: larger;
@@ -35,7 +35,7 @@ export const FormSelect = styled.select`
   padding: 10px;
 `;
 
-export const Button = styled.button`
+export const FormButton = styled.button`
   background-color: #ffffff;
   border-radius: 5px;
   color: #000000;
