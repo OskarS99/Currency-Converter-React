@@ -43,3 +43,12 @@ export const FormButton = styled.button`
   border: #000000;
   width: 100%;
 `;
+
+ export const Loading = styled.p`
+    color: teal;
+ `;
+
+export const Failure = styled.p`
+  color: crimson;
+`;
+ 
