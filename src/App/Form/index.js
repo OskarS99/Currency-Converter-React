@@ -37,12 +37,12 @@ export const Form = () => {
   return (
     <FormStyled onSubmit={onSubmit}>
       <FormHeader>Przelicznik walut</FormHeader>
-      {ratesData.state === "loading" ? (
+      {ratesData.status === "loading" ? (
         <Loading>
           Sekunda... <br />
           Ładuję kursy walut z Europejskeigo Banku Centralnego
         </Loading>
-      ) : ratesData.state === "error" ? (
+      ) : ratesData.status === "error" ? (
         <Failure>Hmm... Coś poszło nie tak</Failure>
       ) : (
         <>
