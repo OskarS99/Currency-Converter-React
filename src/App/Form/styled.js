@@ -45,7 +45,7 @@ export const FormButton = styled.button`
 `;
 
  export const Loading = styled.p`
-    color: teal;
+    color: white;
  `;
 
 export const Failure = styled.p`
