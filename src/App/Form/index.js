@@ -80,7 +80,7 @@ export const Form = () => {
           <p>
             <FormButton>Oblicz</FormButton>
           </p>
-          <Result result={result} />
+          <Result result={result}/>
         </>
       )}
     </FormStyled>
